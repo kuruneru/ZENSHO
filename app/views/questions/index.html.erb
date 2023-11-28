@@ -1,0 +1,21 @@
+<h1>1級</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>問題</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.content %></td>
+        <td><%= link_to 'Show', question %></td> <!-- Showリンクを追加 -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Question', new_question_path %>
