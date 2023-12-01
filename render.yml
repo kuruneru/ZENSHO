@@ -1,6 +1,6 @@
 databases:
   - name: ZENSHO_DB
-    databaseName: zensho_db
+    databaseName: zensho_db_84sb
     user: ZENSHO
     region: singapore
 
