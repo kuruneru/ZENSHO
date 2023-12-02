@@ -3,13 +3,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  namespace :hello do
-    root "top#index"
-  end
-
 
   resources :questions
   root 'questions#index'
   
+  get '/new_questions', to: 'questions#index', as: 'new_questions_path'
   
 end
