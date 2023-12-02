@@ -7,6 +7,7 @@ class QuestionsController < ApplicationController
   
     def new
       @question = Question.new
+      redirect_to new_question_path
     end
   
     def create
