@@ -9,11 +9,7 @@
   </thead>
 
   <tbody>
-    
-  </tbody>
-</table>
-
-<h1>一問一答クイズ</h1>
+    <h1>一問一答クイズ</h1>
 
 <% if flash[:notice] %>
   <p class="notice"><%= flash[:notice] %></p>
@@ -27,6 +23,10 @@
 <%= form_tag({controller: "quizzes", action: "check_answer"}, method: "post") do %>
   <%= text_field_tag "user_answer", @user_answer, placeholder: "回答を入力してください" %>
   <%= submit_tag "回答する" %>
-<% end %>
+<% end %>    
+  </tbody>
+</table>
+
+
 
 <%= link_to 'New Question', new_question_path %>
