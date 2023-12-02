@@ -7,6 +7,4 @@ Rails.application.routes.draw do
   resources :questions
   root 'questions#index'
   
-  get '/new_questions', to: 'questions#new', as: 'new_questions_path'
-  
 end
