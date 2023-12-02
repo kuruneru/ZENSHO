@@ -11,19 +11,18 @@
   <tbody>
     <h1>一問一答クイズ</h1>
 
-<% if flash[:notice] %>
-  <p class="notice"><%= flash[:notice] %></p>
-<% end %>
-<% if flash[:alert] %>
-  <p class="alert"><%= flash[:alert] %></p>
-<% end %>
+    <% if flash[:notice] %>
+      <p class="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p class="alert"><%= flash[:alert] %></p>
+    <% end %>
 
-<p><%= @question.content %></p>
+    <p><%= @question.content %></p>
 
-<%= form_tag({controller: "quizzes", action: "check_answer"}, method: "post") do %>
-  <%= text_field_tag "user_answer", @user_answer, placeholder: "回答を入力してください" %>
-  <%= submit_tag "回答する" %>
-<% end %>    
+    <%= form_tag({controller: "quizzes", action: "check_answer"}, method: "post") do %>
+    <%= text_field_tag "user_answer", @user_answer, placeholder: "回答を入力してください" %>
+    <%= submit_tag "回答する" %>    
   </tbody>
 </table>
 
